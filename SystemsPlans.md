@@ -39,27 +39,27 @@
 <details>
 <summary>Essential Linux Skills</summary>
 
-- [ ]  **First login to the shell**
-- [ ]  **Command line help**
-- [ ]  **Services and processes**
-- [ ]  **Files and file systems**
-- [ ]  **Permissions**
-- [ ]  **Identity and Access Control**
-  - [ ] users
-  - [ ] groups
-  - [ ] ownership
-  - [ ] rights
-- [ ]  **Metadata Management**
-  - [ ] size
-  - [ ] space
-  - [ ] date
-  - [ ] time
-- [ ]  **File Interaction**
-  - [ ] read
-  - [ ] search
-  - [ ] copy
-  - [ ] edit
-  - [ ] delete
+- [X]  **First login to the shell**
+- [X]  **Command line help**
+- [X]  **Services and processes**
+- [X]  **Files and file systems**
+- [X]  **Permissions**
+- [X]  **Identity and Access Control**
+  - [X] users
+  - [X] groups
+  - [X] ownership
+- [X]  **Metadata Management**
+  - [X] size
+  - [X] space
+  - [X] date & time
+- [X]  **File Interaction**
+  - [X] read
+  - [X] search
+  - [X] copy
+  - [X] rename & replace
+  - [X] create
+  - [X] info
+  - [X] delete
 
 </details>
 
