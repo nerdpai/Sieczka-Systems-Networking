@@ -21,7 +21,7 @@ Good for You.
 Download VirtualBox:
 
 - Visit the official VirtualBox website at https://www.virtualbox.org/.
-- Navigate to the "Downloads" section.
+- Navigate to the `Downloads` section.
 - Choose the version of VirtualBox that corresponds to Your host operating system
 (e.g., Windows, macOS, Linux, etc.).
 - Click on the download link to start the download of the VirtualBox installer.
@@ -90,7 +90,31 @@ You're done (need to celebrate with a very large piece of cake)!
 <details>
 <summary>Ubuntu Server Installation</summary>
 
-Since I am not obliged to explain all the steps of the installation..., good luck!
+### Installation
+
+1. After you start up your VM by first,
+select "Try or Install Ubuntu".
+1. Choose the language, and believe me,
+sooner than later but you will change
+the language of your system to English anyway,
+so do not create problems for your future self
+and choose the language right away
+(But just don't choose British English, remember -
+"coloUr" is the most evil thing you can meet in your life.).
+1. "Continue without updating".
+1. If I were you, I'd leave keyboard configuration
+as default, so just "Done".
+1. This is just a virtual machine installation,
+so I don't think you need any proprietary drivers.
+"Done".
+1. Wait 5 seconds for configuration and ~~"DonDoDon" :pouting_cat:~~ "Done".
+1. Configure your proxy, or just "Done".
+1. Wait 5 second for configuration and "Done".
+1. Configure storage, or "Done".
+1. You have second chance to configure storage,
+or just "Done".
+1. Then "Continue" if you want installation to begin.
+1. And after installation is complete, just click "Enter".
 
 ### Partitioning in the installer
 
@@ -225,7 +249,7 @@ To create a checkpoint (snapshot):
 
 #### ***Microsoft specials***
 
-Why the f**k you always tend to have your own naming...
+~~Why the f**k you always tend to have your own naming...~~
 
 ### Clone vs Snapshots
 
@@ -286,7 +310,7 @@ We will use the [pam_usb] tool to achieve our destiny.
 - Install all packages form the instruction for "debian based" on [pam_usb].
 - Also install make, gcc.
 - Make "git clone 'link here'".
-- Move Yours current position to the pam_usb folder.
+- Move Yours current position to the pam_usb directory.
 - Use "make" command.
 - And "sudo make install"
 
@@ -302,7 +326,7 @@ All that's left to do is configure [pam_usb].
 so open file "/etc/pam.d/common-auth" via root
 and add "auth sufficient pam_usb.so" to the top of the file.
 
-The result of these efforts - will be a folder with a file on the drive:
+The result of these efforts - will be a directory with a file on the drive:
 
 ![Ups, the image is somewhere](./images/basics/essential_linux_skills/password_usb0.png)
 
@@ -329,6 +353,10 @@ First thing that you should recall when you encounter problems
 (especially dementia) - man. Just write "man 'your command'"
 and if man have something to say you, he will show you
 the help instruction.
+
+### tldr
+
+better man
 
 ### A bit of luck
 
@@ -365,9 +393,9 @@ Here we are on the best site of tutorials!
 
 ![Ups, the image is somewhere](./images/basics/essential_linux_skills/youtube_agreement.png)
 
-Mhm, youtube agreement, so..., I suppose
-we just reject all of that. Aha, so i can't make any click
-and tab also does not work...
+*Mhm, youtube agreement, so..., I suppose*
+*we just reject all of that. Aha, so i can't make any click*
+*and tab also does not work...*
 
 Solutions to this problem are not plentiful:
 
@@ -453,8 +481,8 @@ To show the number of CPUs — "lscpu | grep ^CPU\\(s\\)".
 
 Linux users should be aware of certain service operations, such as:
 
-- Enable service — "systemctl enable \<Name of process>"
-- Disable service — "systemctl disable \<Name of process>"
+- Enable service — "systemctl enable [--now] \<Name of process>"
+- Disable service — "systemctl disable [--now] \<Name of process>"
 - Start — "systemctl start \<Name of process>"
 - Stop — "systemctl stop \<Name of process>"
 - Restart — "systemctl restart \<Name of process>"
@@ -691,6 +719,8 @@ As criteria can be used regex.
 "find . -iregex '\.\/[a-z]+.md'" - find all files in current
 directory that end by .md and have only characters before.
 
+"fzf" - a lot better find.
+
 #### ***copy***
 
 "cp \[options] \<source> \<destination>"
@@ -703,7 +733,7 @@ directory that end by .md and have only characters before.
 
 To rename or replace you can use — "mv".
 
-"mv [options] \<source> \<destination>"
+"mv \[options] \<source> \<destination>"
 
 "mv -p \<sFile> \<dFile>" — for files with preserving file attributes.
 
@@ -713,13 +743,13 @@ To rename or replace you can use — "mv".
 
 Files:
 
-"touch [options] \<list of names or pathes>" — for file creation.
+"touch \[options] \<list of names or pathes>" — for file creation.
 
 "touch t1 t2 t3" — create 3 files with prefix "t" in the current directory.
 
 Directories:
 
-"mkdir [options] \<list of names or pathes>" — for directory creation.
+"mkdir \[options] \<list of names or pathes>" — for directory creation.
 
 "mkdir test" — create test directory in the current directory.
 
@@ -728,16 +758,18 @@ but also create all parent directories that does not exist.
 
 #### ***info***
 
-"file [options] \<file path or name>" — short information about file.
+"file \[options] \<file path or name>" — short information about file.
 
 "file t1"
 
-"stat [options] \<path or name>" — displays some useful information
-about the object
+"stat \[options] \<path or name>" — displays some useful information
+about the object.
 
 "stat t2"
 
 "stat test1"
+
+"exiftool \[options] \<path or name>" — one of the best metadata tool.
 
 #### ***delete***
 
@@ -769,11 +801,51 @@ top — interective and more complex then ps manager of processes.
 
 #### ***htop***
 
+:astonished: Is it a "top" but with a friendly design,
+complex features and the ability to not only write commands in loop
+but also "click" buttons?
+
 #### ***netstat***
+
+netstat is a powerful tool for network troubleshooting and monitoring.
+
+"sudo apt install net-tools" — to install.
+
+"netstat -a" — shows all conections.
+
+"netstat -na" — shows all connections
+without resolving names.
+
+"netstat -nat" — shows tcp connections.
+
+"netstat -r" — shows routing table.
+
+"netstat -tn" — shows tcps where data transferring is active.
 
 #### ***Terminator***
 
+"sudo apt install terminator" — for installation.
+
+since this is a gui application then we ought to install xvfb
+for virtual monitor,.... good luck somehow display it!
+
 #### ***tmux***
+
+Just type "tmux" and you are in heaven.
+
+All commands start with "ctrl + b":
+
+- "c" — create new window.
+- "n or p" — move to the next ot previous window.
+- "&" — kill current window.
+- "% or "" — split current panel verticaly or horizontaly.
+- "x" — close panel.
+- "d" — exit from the tmux (and save it, somelike minimize).
+- ":" — and then "kill-session" to exit and end process.
+
+"tmux ls" — list sessions.
+
+"tmux attach -t \<number_of_the_session>" — return to the session.
 
 </details>
 
@@ -786,12 +858,71 @@ Literally less complex version of neovim.
 
 #### ***nano***
 
+It should be pre-installed. Just type "nano \[options] \<path_to_the_file>"
+
+"nano -l \<file>" — open the file and
+displays the line number to the left of the text area.
+
+When nano is opened, press: (ctrl/command) + W to show help.
+And after you read this "tutorial", my congratulation,
+you mastered nano.
+
 #### ***neovim***
+
+History evolution:
+vi -> vim -> neovim.
+
+"sudo apt install neovim" — to install.
+
+Please, write "nvim" and then ":Tutor". This will be a short guide to neowim.
+
+And after that... PLUGINS!
+
+To install plugins watch [this prefect video] with one remark:
+change "sudo packman -S ..." to "sudo apt install ..."
+
+And e.g. we can convert neovim into a chat with OpenAI GPT:
+
+![Ups, the image is somewhere](./images/basics/system_administration/neovim_gpt.png)
 
 </details>
 
 <details>
 <summary>sudo command</summary>
+
+#### ***sudo***
+
+Sudo is a command-line utility that allows users to execute
+commands with the privileges of the root user.
+
+#### ***Who can use sudo***
+
+In the first place we should look inside sudoers file.
+To check out the sudoers file,
+simply type “sudo visudo” and it’ll pop open.
+Inside the sudoers file,
+you can assign specific sudo permissions to users and groups.
+We use a special syntax for this:
+
+\[user] \[host]=(\[run as]) \[commands]
+
+user: The user who will be granted the permissions.
+host: The host on which the user can run commands.
+run as: Defines the users as whom the commands can be run.
+commands: The specific commands that the user is allowed to run.
+
+![Ups, the image is somewhere](./images/basics/system_administration/sudoers_vanile.png)
+
+A user can also inherit sudo permissions from the groups he is in.
+
+#### ***Examples***
+
+- "alice ALL=(bob) ALL" — alice can execute any command from bob user on any host.
+- "bob ALL=(ALL) NOPASSWD: /usr/bin/apt update" — bob can execute apt update from.
+any host and user
+- "ALL ALL=(ALL) ALL" — everyone can do whatever they want.
+- "edna name_of_specific_host=(edna) ALL" — edna can execute any comand only when
+she is login from name_of_specific_host.
 
 </details>
 
@@ -800,18 +931,101 @@ Literally less complex version of neovim.
 
 #### ***creating users***
 
+##### **useradd**
+
+"useradd \[options] \<username>"
+
+Some options:
+
+- "-M" — create without a directory.
+- "-s" — specify shell.
+- "-e" — specify the expire date, when user'll be disabled.
+- "-p" — set a password.
+- "-u" — set a user ID (UID) manually.
+- "-g" — create user and make him a member of specific group
+(use group id for that).
+
+Examples:
+
+- "sudo useradd -e 2024-05-30 \<username>" — user'll be disabled by the date.
+- "sudo useradd -M \<username>" — user without home directory.
+- "sudo useradd -u 4444 \<username>" — user with 4444 UID.
+- "sudo useradd -g 27 \<username>" — user'll be added to the group with GID 27
+(sudo on my machine).
+
+##### **adduser**
+
+"adduser \[options] \<username>" — friendlier version of useradd,
+by default generate password and home directory,
+and some additional information about user.
+
 #### ***creating groups***
+
+##### **groupadd**
+
+"groupadd \[options] \<groupname>"
+
+Some options:
+
+"-g" — create a group with specific GID
+"-r" — create a system group
+
+##### **addgroup**
+
+"addgroup \[options] \<groupname>" — friendlier version of groupadd,
+by default choosing Debian policy conformant GID values
+
+#### ***add users to groups***
+
+##### **usermod**
+
+"usermod \[options] \<username>"
+
+"usermod -aG \<groupname> \<username>" — add user to the group.
+
+##### **gpasswd**
+
+"gpasswd \[options] \<username>"
+
+"gpasswd -a \<username> \<groupname>" — attach user to the group.
 
 #### ***deleting users***
 
+1. "sudo killall -u \<username>" — kill all users processes and log him out.
+1. "sudo passwd -l \<username>" — block user (he can't log in).
+1. "crontab -r -u \<username>" — stop all system jobs.
+1. "id -nG \<username>" — check all his groups.
+1. "sudo deluser \<username> \<groups>" — remove him from groups.
+1. "sudo userdel -r \<username>" — remove user and home directory.
+
 #### ***deleting groups***
 
+"sudo groupdel \<groupname>"
+
 #### ***managing users passwords***
+
+- "sudo passwd \<username>" — change password for the user.
+- "sudo chage -M 90 \<username>" — make password periodically (90 days)
+changeable for the user.
 
 </details>
 
 <details>
 <summary>Aliases</summary>
+
+"alias \<alias>='\<another_text>'" — create a alias for another text.
+
+"alias vim='nvim'"
+"alias neovim='nvim'"
+
+"ln \<path_to_file> \<path_to_link>" — create an alias for file (symbolic link).
+
+"ln \home\nerd\really_secret\pierogi_recipe.secret \home\nerd\pierogi_link.scrt"
+
+"ln -s \<path_to_directory> \<path_to_link>" —
+create an alias for directory (soft link).
+
+"ln -s secret/really_secret/super_secret/securets shortcut_secret"
 
 </details>
 
@@ -820,56 +1034,224 @@ Literally less complex version of neovim.
 
 #### ***YUM***
 
+Distributions: CentOS
+
+Extension: .rpm
+
+Install package: "sudo yum install \<package_name>"
+
+Delete package: "sudo yum remove \<package_name>"
+
 #### ***RPM***
+
+Distributions: Fedora, openSUSE
+
+Extension: .rpm
+
+Install package: "sudo rpm -i \<package_name>"
+
+Delete package: "sudo rpm -e \<package_name>"
 
 #### ***APT***
 
+Distributions: Debian-based, Ubuntu
+
+Extension: .deb
+
+Install package: "sudo apt install \<package_name>"
+
+Delete package: "sudo apt remove \<package_name>"
+
 #### ***APT-GET***
+
+Distributions: Debian-based, Ubuntu
+
+Extension: .deb
+
+Install package: "sudo apt-get install \<package_name>"
+
+Delete package: "sudo apt-get remove \<package_name>"
 
 #### ***DPKG***
 
-#### ***DEB***
+Distributions: Debian-based, Ubuntu
+
+Extension: .deb
+
+Install package: "sudo dpkg -i \<package_name>"
+
+Delete package: "sudo dpkg -r \<package_name>"
+
+#### ***PACMAN***
+
+Distributions: ArchLinux
+
+Extension: .pkg.tar.xz
+
+Install package: "sudo pacman -S \<package_name>"
+
+Delete package: "sudo pacman -R \<package_name>"
 
 </details>
 
 <details>
 <summary>Compiling from source</summary>
 
+It really depends on exactly what you are trying to compile.
+But here are the most common compilation utilities:
+cmake, make, gcc, gcc-go, golang-go (or for last two
+just "sudo snap install go --classic" instead of apt vesion).
+
+But what I highly recommend is to install docker
+(instruction somewhere above)
+it makes your life a lot easier,
+when you are not depending on the environment,
+and also... DOCKER HUB, probably it's the easiest
+way to install things, espesially when it's
+spiteful and popular enough to be on that hub.
+
+Examples:
+
+- go above and look example with gcc and make
+in pam_usb installation.
+- go above and look example with docker (dockerhub)
+browsh installation.
+
 </details>
 
 <details>
 <summary>Space management</summary>
+
+"sudo apt install duf" -> "duf" —
+good-looking and intuintive tool, to display space availability
+
+"sudo apt install tree" -> "tree" —
+explore directories in tree like architecture.
+
+"sudo apt install mc" -> "mc" —
+file manager.
+
+"sudo apt install nnn" -> "nnn" —
+better mc.
+
+"sudo apt install ranger" -> "ranger" —
+better nnn.
+
+"sudo apt install cargo" -> "export PATH=$PATH:\<home_directory>/.cargo/bin"
+— rust installer for next few programs.
+
+"cargo install dua-cli" — space visualizer in progess bar style.
+
+"cargo install diskonaut" — space visualizer in treemap style
+(like such macroeconomics rectangle graphs).
 
 </details>
 
 <details>
 <summary>Drives and partitions</summary>
 
+"umount /dev/sda\<number>; resize2fs /dev/sda\<number> 200G" —
+resize partition sda\<number> to 200G.
+
+"umount /dev/sdb\<number>; mkfs.ntfs /dev/sdb\<number>" —
+change filesystem of partition sdb\<number> to ntfs.
+
+"lvresize -L 20G /dev/vg0/lv-2; resize2fs /dev/vg0/lv-2" —
+resize logical volume lv2 to 20G.
+
 </details>
 
 <details>
-<summary>Creating ext4 file system and permanently mounting (Tworzenie systemu plików ext4 i montowanie stałe)</summary>
+<summary>Creating ext4 file system and permanently mounting</summary>
+
+#### ***DISCLAIMER***
+
+- We have a drive... yeah, I think it's a pretty cool device.
+It cans read bytes, write bytes..., and in simpler terms, that's all.
+- If we are incredibly lucky, probably, we have OS on our host.
+And if we are the type of person, who likes to sort things up,
+we could split our driver to partitions, you know, like add some
+partitions to a big box to create smaller boxes.
+- Ok, I doubt, that you will write the size and index of the first byte
+for each file on the paper. So we will set some filesystems for our partitions.
+- Filesystems are very complex animals, to make them work with our OS,
+we have to create interface through which OS'll speak with FS.
+In other words, we're going to mount it (create a mount point for OS).
+(You can imagane it like we give reference for partition FS to our OS FS).
+
+Pretty flimsy construction, don't you think?.. I don't think so either.
+
+#### ***Linuх***
+
+1. "sudo fdisk -l" — list all drives.
+1. "sudo fdisk \<drive>" — create \<partition> on \<drive>.
+1. "sudo mkfs.ext4 \<partition>" —
+format \<partition> with ext4 filesystem.
+1. "sudo mkdir /mnt/\<partition_name>" — create a directory in root.
+1. "sudo mount \<partition> /mnt/\<partition_name>" —
+mount ext4 filesystem of \<partition> to the directory
+(create a "link" to the \<partition> filesystem in the directory).
+1. "sudo blkid" — to find \<partition_UUID>.
+1. "sudo nano /etc/fstab" — the file with filesystems configs.
+1. insert this text to the end of file:
+"UUID=\<partition_UUID> /mnt/\<partition_name> ext4 defaults 0 2" —
+so, this line says the following: the mount for the \<partition> FS
+is in the directory, it's ext4 FS, 'default' as mount option,
+0 - that we don't want backups, and 2 - the number of priority
+to load FSs (because we want in the first place load or main FS
+without her we can't reach '/mnt/\<partition_name>' directory anyway).
+
+If we do not want mount to be permanently
+(to system automaticly load FS for out partition),
+we can stop on point 5 including (to do it manually via 'maunt').
 
 </details>
 
 <details>
 <summary>Managing logical volumes</summary>
 
-</details>
-
-<details>
-<summary>NFS service</summary>
-
-#### ***server***
-
-#### ***client***
-
-#### ***fstab***
+- "sudo pvcreate \<partition>" —
+intitalize metadata to th partition
+(create physical volume).
+- "sudo vgcreate \<vgroup_name> \<physical_volume>" —
+create volume group from the physical volume.
+- "sudo vgextend \<vgroup_name> \<another_physical_volume>" —
+add new pv to the vg.
+- "sudo lvcreate -n \<logicalv_name> -L 10G \<vgroup_name>" —
+create logical volume (some kind of partition) from the vg.
+- "sudo mkfs.ext4 \<logicalv_name>" —
+format the lv with ext4 FS.
+- "sudo lvremove \<logicalv_name>" —
+delete lv.
+- "sudo vgremove \<vgroup_name>" —
+delete vg.
 
 </details>
 
 <details>
 <summary>System monitoring</summary>
+
+#### ***tiptop***
+
+So here we will use the best tool for monitoring —
+tiptop.
+
+"sudo apt install tiptop" — for installation.
+
+Type "tiptop" and
+*...."The Sound of dial-up Internet"....*
+~~Mhm.., obviously it's not working well on VM. What the irony with naming~~
+
+#### ***glances***
+
+So here we will use the best tool for monitoring —
+glances.
+
+"sudo apt install python3 python3-pip python3-dev;
+sudo pip3 install glances;
+sudo ln -s /usr/local/bin/glances /usr/bin/glances" — for installation.
+
+Type "glances" and the tool will appear. Press "h" for help.
 
 </details>
 
@@ -885,30 +1267,240 @@ Literally less complex version of neovim.
 <details>
 <summary>Network configuration</summary>
 
+Since "network configuration" is a comples topic,
+here is just a bunch of random commands:
+
+- "ifconfig" — show the network interfaces.
+- "ip a" — very similar to above.
+- "route" — show routing table.
+- "sudo dhclient -v" — ask dhcp about address.
+- "sudo dhclient -v -r" — release the address given from dhcp.
+- netstat commands
+- "sudo ifconfig \<network_adapter> down" — stop the netwrok adapter.
+- "sudo ifconfig \<network_adapter> up" — start ... .
+
+netplan — is a standart tool to configure network interfaces in ubuntu.
+On other machines more traditional is the /etc/networ/interfaces way.
+We can access netplan's configuration file by
+going to the /etc/netplan directory and open file
+with name "00-installer-config.yaml". For me it contains:
+
+"# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: true
+    enp0s8:
+      dhcp4: true
+    enp0s9:
+      dhcp4: true
+  version: 2"
+
+Here we can see our network configuration.
+E.g. we can add new interface if that is not here;
+delete some existant interface;
+make the interface with static ip,
+just setting dhcp4 to flase,
+and by specify the address and gateway manually:
+"dhcp4: false
+addresses:
+    -\<address1>/\<mask>
+gateway4: \<address2>";
+or specify DNSs:
+"nameservers:
+    addresses: [\<address3>, \<address4>]";
+
+*I personaly prefer the traditional way of network interfaces.*
+~~And if you want too, please read about that by yourself.~~
+
+After changing this .yaml file, use the command "netplan apply"
+to make changes work.
+
 </details>
 
 <details>
 <summary>SSH service</summary>
 
-- [ ] client configuration
-- [ ] server configuration
-- [ ] tunneling
-- [ ] SCP
+Before we begin, INSTALLATION:
+
+"sudo apt-get install openssh-server" — for server.
+
+"sudo apt-get install openssh-server" — for client.
+
+"sudo systemctl enable --now ssh" — to make service work.
+
+#### ***client configuration***
+
+To configure client, please find file: "\etc\ssh\ssh_config".
+
+Open it with nano(or with something else) and be horrified.
+Because we already have all possible configurations with example
+values in the comments (god bles the guy who done that).
+
+The most interesting directives (options):
+
+- Port — to change standart ip port for ssh connection to server  "Port 22".
+- ForwardX11 — to make it possible run gui apps on server and send
+screen to the host  "ForwardX11 yes".
+- ForwardAgent — to make it possible share secure SSH-Keys with server
+  "ForwardAgent", e.g. to make commits from server to your repository.
+
+"sudo systemctl restart ssh" — restart service to read config with changes.
+
+#### ***server configuration***
+
+To configure client, please find file: "\etc\ssh\sshd_config" (yahoo, daemon).
+
+Open that with text editor.
+
+The most interesting directives (options):
+
+- Port — to change standart ip port for ssh connection to listening  "Port 22".
+- AddressFamily — which kind of ip use 4 or 6   "AddressFamily inet"(for 4).
+- UsePAM — define if client can use PAM(Pluggable Authentication Module)
+for log in  "UsePAM yes".
+- ClientAliveInterval — how long session of the client will be active
+  "ClientAliveInterval 150m"(e.g. 150 minut).
+- MaxAuthTries — how many times client can make mistakes while log in process
+  "MaxAuthTries 5".
+- MaxSessions — max count of active sessions  "MaxSessions 3".
+- LoginGraceTime — timeout for every mistake while log in
+  "LoginGraceTime 1m".
+
+"sudo systemctl restart ssh" — restart service to read config with changes.
+
+#### ***tunneling***
+
+So waht is tunneling in shh?
+
+I do not know how about You, but i prefer to learn by examples.
+Image, that You have server on which the database is running localy on some port,
+and You want to access that database.
+You have to connect to the server (via ssh) and ask your server
+to connect Your host to the database. So, server brings
+db port, connect it to your port and you are done.
+
+In other words, when ssh is like phone call,
+where phone number is ip of server. Tunneling is more like calling a call center
+and being transferred to a specific department.
+
+To achive that use this template:
+
+"ssh -L \<local_port>:\<localhost>:\<remote_port> \<user>@\<server_ip>"
+
+"ssh -N -L \<local_port>:\<localhost>:\<remote_port> \<user>@\<server_ip>"
+— the same as above but without shell session.
+
+Exm: "ssh -L 33:127.0.0.1:77 sundar@8.8.8.8"
+
+#### ***SCP***
+
+~~SCP(Special Containment Procedures) is a fundation that specialize in~~
+~~the containment and study of anomalous creatures or objects to protect mankind.~~
+
+SCP(Secure Copy Protocol) is a protocol which allows you to securely transfer
+files between a local host and a remote host.
+
+"scp \<host_file> \<user>@\<server_ip>:\<server_where>"
+— copy the file from host to the server.
+
+"scp \<user>@\<server_ip>:\<server_file> \<host_where>"
+— copy the file from server to the host.
 
 </details>
 
 <details>
-<summary>Networks and firewalls</summary>
+<summary>NFS service</summary>
+
+~~InSTARr Platinum (a zillion "ORA" output in the shell)~~
+
+#### ***server***
+
+Install server — "sudo apt install nfs-kernel-server".
+"sudo systemctl enable --now nfs-kernel-server" — tunr it on.
+
+"sudo chmod 775 \<directory_to_share>" — make share directory accessable.
+
+"sudo nano /etc/exports"
+and then add this line:"\<directory_to_share> \<client_ip>(\[options])".
+E.g "/ 22.22.22.21(rw,sync,no_subtree_check)"
+
+"sudo systemctl restart nfs-kernel-server" after changes.
+And we should have possibility to connect to.
+
+#### ***client***
+
+Install client — "sudo apt install nfs-common". (Debian-based)
+
+Install client —
+enable "Services for NFS" with all subpoints in Windows Featurs. (Windows)
+
+Connection:
+
+TERMiNAL"sudo mount -t nfs \<host_ip>:\<directory_to_share> \<mount_point>".
+To mount shared directory to mount point.
+
+CMD"mount \\\\\<host_ip>\<directory_to_share> \<drive_letter>:".
+E.g. "mount \\8.8.8.8\home Z:". To mount shared directory to system
+(will disappear after reboot).
+
+![Ups, the image is somewhere](./images/basics/networking/nfs.png)
+
+CMD"mount -o persistent=yes \\\\\<host_ip>\<directory_to_share> \<drive_letter>:".
+For permanently mounting.
+
+#### ***fstab***
+
+As metioned in previous topic, we will edit /etc/fstab
+to make out mount permanent.
+
+add this line to the file:
+"\<host_ip>:\<directory_to_share> \<mount_point> nfs defaults 0 2".
+And from now your system will automaticly mount this shared directory.
 
 </details>
 
 <details>
 <summary>File Hosts and hostname</summary>
 
+#### ***Hostname***
+
+Open "/etc/hostname", it containts your machine name,
+which is used to identify your host in network,
+also you can find your host name in your "shell cursor":
+"\<username>@\<hostname>:~$\<your_command>"
+
+We can change this file and our hostname in "shell cursor"
+will also change after reboot.
+
+#### ***Hosts***
+
+Open "/etc/hosts", here are maps between adresses and names,
+like dns. But the hosts file has a higher priority than any DNS servers.
+So we can for example, reroute some websites?
+
+Add line "127.0.0.1 www.google.com" to reroute your favorite uncle to localhost.
+
 </details>
 
 <details>
 <summary>Configuring interfaces using nmtui</summary>
+
+"sudo apt install network-manager" — to bit-to-bit repair the body of application.
+
+"nmtui" — to start tool. And, oh boy, graphical interface.
+
+We can:
+
+- Set a hostname.
+- Activate a connection.
+- Edit a connection.
+
+About Editing:
+
+- Add new connection.
+- Edit existant connection.
+- Delete existant connection.
 
 </details>
 
@@ -919,6 +1511,26 @@ Literally less complex version of neovim.
 
 <details>
 <summary>Assigning multiple IP addresses to network interfaces</summary>
+
+Why again we want to do that?
+
+*Whisper*.
+
+Mhm, k, lets pretend I don't have schizophrenia.
+So, e.g. hosting multiple services or network segregation.
+
+if you want to assign multiple ip addresse:
+
+- Open "/etc/netplan/00-installer-config.yaml"
+- Where you have your interface add the addresses, like this:
+
+"\<interface>:
+
+  addresses:
+
+    \- \<netwrok1>
+
+    \- \<netwrok2>"
 
 </details>
 
@@ -948,9 +1560,23 @@ Literally less complex version of neovim.
 <details>
 <summary>VNC (optional)</summary>
 
+Since optional, then optional.
+
 </details>
 
 </div>
+
+</details>
+
+#
+
+<details>
+<summary>Afterface</summary>
+
+That's a sweetie honey - [awesome-cli-apps], that's all you need in cli linux.
+
+Also I took this whole tutorial as an "introductory" guide to linux,
+so I wrote it as I took it.
 
 </details>
 
@@ -990,6 +1616,10 @@ supongo que te servirá...?
 
 </details>
 
+<!-- ———————————————————————————————————————————————————————————————— -->
+
 [deepl]: <https://www.deepl.com/>
 [Ubuntu Server]: <https://ubuntu.com/download/server>
 [pam_usb]: <https://github.com/mcdope/pam_usb>
+[this prefect video]: <https://www.youtube.com/watch?v=69tzu7YVlx4>
+[awesome-cli-apps]: <https://github.com/agarrharr/awesome-cli-apps>

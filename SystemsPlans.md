@@ -16,6 +16,7 @@
 <details>
 <summary>Ubuntu Server Installation</summary>
 
+- [X] **Installation**
 - [X] **Partitioning in the installer**
 - [X] **Partitioning using LVM (Logical Volume Manager)**
 - [X] **Swap space (Przestrzeń wymiany)**
@@ -66,54 +67,54 @@
 <details>
 <summary>System Administration</summary>
 
-- [ ] **Useful Linux system tools**
-  - [ ] top
-  - [ ] htop
-  - [ ] netstat
+- [X] **Useful Linux system tools**
+  - [X] top
+  - [X] htop
+  - [X] netstat
   - [ ] Terminator
-  - [ ] tmux
-- [ ] **Console editors**
-  - [ ] vim
-  - [ ] nano (optional)
-  - [ ] neovim
-- [ ] **sudo command**
-- [ ] **Users operations**
-  - [ ] creating users
-  - [ ] creating groups
-  - [ ] deleting users
-  - [ ] deleting groups
-  - [ ] managing users passwords
-- [ ] **Aliases**
-- [ ] **Package management**
-  - [ ] YUM
-  - [ ] RPM
-  - [ ] APT
-  - [ ] APT-GET
-  - [ ] DPKG
-  - [ ] DEB
-- [ ] **Compiling from source**
-- [ ] **Space management**
-- [ ] **Drives and partitions**
-- [ ] **Creating ext4 file system and permanently mounting (Tworzenie systemu plików ext4 i montowanie stałe)**
-- [ ] **Managing logical volumes**
-- [ ] **NFS service**
-  - [ ] server
-  - [ ] client
-  - [ ] fstab
-- [ ] **System monitoring**
+  - [X] tmux
+- [X] **Console editors**
+  - [X] vim
+  - [X] nano (optional)
+  - [X] neovim
+- [X] **sudo command**
+- [X] **Users operations**
+  - [X] creating users
+  - [X] creating groups
+  - [X] add users to groups
+  - [X] deleting users
+  - [X] deleting groups
+  - [X] managing users passwords
+- [X] **Aliases**
+- [X] **Package management**
+  - [X] YUM
+  - [X] RPM
+  - [X] APT
+  - [X] APT-GET
+  - [X] DPKG
+  - [X] PACMAN
+- [X] **Compiling from source**
+- [X] **Space management**
+- [X] **Drives and partitions**
+- [X] **Creating ext4 file system and permanently mounting (Tworzenie systemu plików ext4 i montowanie stałe)**
+- [X] **Managing logical volumes**
+- [X] **System monitoring**
 
 </details>
 
 <details>
 <summary>Networking</summary>
 
-- [ ] **Network configuration**
-- [ ] **SSH service**
-  - [ ] client configuration
-  - [ ] server configuration
-  - [ ] tunneling
-  - [ ] SCP
-- [ ] **Networks and firewalls**
+- [X] **Network configuration**
+- [X] **SSH service**
+  - [X] client configuration
+  - [X] server configuration
+  - [X] tunneling
+  - [X] SCP
+- [X] **NFS service**
+  - [X] server
+  - [X] client
+  - [X] fstab
 - [ ] **File Hosts and hostname**
 - [ ] **Configuring interfaces using nmtui**
 - [ ] **Firewall**
@@ -125,7 +126,7 @@
 <details>
 <summary>Remote Access</summary>
 
-- [ ] **SSH**
+- [ ] **SSH clients**
   - [ ] putty
   - [ ] mremoteNG
   - [ ] MobaXtrem
