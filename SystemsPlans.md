@@ -35,6 +35,8 @@
 
 </details>
 
+***
+
 ## Basics of Linux system
 
 <details>
@@ -115,11 +117,11 @@
   - [X] server
   - [X] client
   - [X] fstab
-- [ ] **File Hosts and hostname**
-- [ ] **Configuring interfaces using nmtui**
-- [ ] **Firewall**
-- [ ] **Assigning multiple IP addresses to network interfaces**
-- [ ] **Monitoring traffic using tcpdump**
+- [X] **File Hosts and hostname**
+- [X] **Configuring interfaces using nmtui**
+- [X] **Firewall**
+- [X] **Assigning multiple IP addresses to network interfaces**
+- [X] **Monitoring traffic using tcpdump**
 
 </details>
 
@@ -133,3 +135,5 @@
 - [ ] **VNC (optional)**
 
 </details>
+
+***
