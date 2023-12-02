@@ -128,10 +128,10 @@
 <details>
 <summary>Remote Access</summary>
 
-- [ ] **SSH clients**
-  - [ ] putty
-  - [ ] mremoteNG
-  - [ ] MobaXtrem
+- [X] **SSH clients**
+  - [X] putty
+  - [X] mremoteNG
+  - [X] MobaXtrem
 - [ ] **VNC (optional)**
 
 </details>
