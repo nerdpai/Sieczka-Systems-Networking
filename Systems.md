@@ -1387,7 +1387,7 @@ for log in  `UsePAM yes`.
 
 #### ***tunneling***
 
-So waht is tunneling in ssh?
+So what is tunneling in ssh?
 
 I do not know how about You, but i prefer to learn by examples.
 Image, that You have server on which the database is running localy on some port,
