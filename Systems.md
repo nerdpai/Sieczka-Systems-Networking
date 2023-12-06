@@ -1292,7 +1292,7 @@ We can access netplan's configuration file by
 going to the /etc/netplan directory and open file
 with name `00-installer-config.yaml`. For me it contains:
 
-```console
+```yaml
 # This is the network config written by 'subiquity'
 network:
   ethernets:
@@ -1312,7 +1312,7 @@ make the interface with static ip,
 just setting dhcp4 to flase,
 and by specify the address and gateway manually:
 
-```console
+```yaml
 dhcp4: false
 addresses:
     -<address1>/<mask>
@@ -1321,7 +1321,7 @@ gateway4: <address2>
 
 or specify DNSs:
 
-```console
+```yaml
 nameservers:
     addresses: [<address3>, <address4>]
 ```
@@ -1562,7 +1562,7 @@ if you want to assign multiple ip addresse:
 - Open `/etc/netplan/00-installer-config.yaml`
 - Where you have your interface add the addresses, like this:
 
-```console
+```yaml
 <interface>:
   addresses:
     - <netwrok1>
