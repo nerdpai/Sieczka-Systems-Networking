@@ -22,7 +22,7 @@ Good for You.
 
 Download VirtualBox:
 
-- Visit the official VirtualBox website at https://www.virtualbox.org/.
+- Visit the official VirtualBox website at [virtualbox home page].
 - Navigate to the `Downloads` section.
 - Choose the version of VirtualBox that corresponds to Your host operating system
 (e.g., Windows, macOS, Linux, etc.).
@@ -384,12 +384,12 @@ we are going to use browser!
 
 But before,... docker instalation!
 
-- sudo apt install apt-transport-https ca-certificates curl software-properties-common
-- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-- sudo add-apt-repository "deb [arch=amd64]
-https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-- sudo apt update
-- sudo apt install docker-ce
+- `sudo apt install apt-transport-https ca-certificates curl software-properties-common`
+- `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+- `sudo add-apt-repository "deb [arch=amd64]
+https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`
+- `sudo apt update`
+- `sudo apt install docker-ce`
 
 And now, installation and first run of perfect gui browser:
 `sudo docker run -ti browsh/browsh https://youtube.com`.
@@ -1785,3 +1785,4 @@ supongo que te servirá...?
 [putty main page]: <https://www.putty.org/>
 [MobaXtrem main page]: <https://mobaxterm.mobatek.net/>
 [mremoteNG main page]: <https://mremoteng.org/>
+[virtualbox home page]: <https://www.virtualbox.org/>
